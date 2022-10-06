@@ -9,18 +9,18 @@
 
 int main( int argc, char* argv[] )
 {
-    std::stack<unsigned char> bytes;
-    if (argc > 2 ) {
+  std::stack<unsigned char> bytes;
+  if (argc > 2 ) {
         std::cout << "Too many arguments. Usage: bhex 'hexstring'" << std::endl;
         return -1;
-    } else 
+  } else 
         if (argc < 2) {
             std::cout << "Too few arguments. Usage: bhex 'hexstring'" << std::endl;
             return -1;
         }
 
-    std::string   hex = argv[1];
-    if (hex.length() % 2 != 0 ) 
+  std::string   hex = argv[1];
+  if (hex.length() % 2 != 0 ) 
     {
         std::cout << "It only works with even srings. Usage: bhex 'hexstring'" << std::endl;
         return -1;
